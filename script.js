@@ -7,8 +7,8 @@ function _r9(text) {
       result = result
         .replaceAll(`n(${i+187})`,`"${e[i]}"`)
         .replaceAll(`e(${i+187})`,`"${e[i]}"`)
-        .replaceAll(`t(${i+187})`,`"${e[i]}"`)
-        .replaceAll(`r(${i+187})`,`"${e[i]}"`)
+        .replaceAll(`t(${i})`,`"${e[i]}"`)
+        .replaceAll(`r(${i})`,`"${e[i]}"`)
         .replaceAll(`a(${i+187})`,`"${e[i]}"`)
         .replaceAll(`o(${i+187})`,`"${e[i]}"`)
         .replaceAll(`i(${i+187})`,`"${e[i]}"`)
