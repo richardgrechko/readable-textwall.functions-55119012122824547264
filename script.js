@@ -28,7 +28,7 @@ function _r9(text) {
     if (typeof ef[i] == "string") {
       result = result
         .replaceAll(`t(${i+187})`,`"${n(i+187)}"`)
-        .replaceAll(`b "${n(i+187)}"`,`bt(${i+187})`)
+        .replaceAll(`b"${n(i+187)}"`,`bt(${i+187})`)
         .replaceAll(`n(${i+187})`,`"${n(i+187)}"`)
         .replaceAll(`e(${i+187})`,`"${n(i+187)}"`)
         .replaceAll(`r(${i+187})`,`"${n(i+187)}"`)
