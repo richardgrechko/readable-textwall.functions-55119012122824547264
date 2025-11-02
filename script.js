@@ -19,10 +19,10 @@ function _r9(text) {
           a.push(a.shift())
       }
   })(r)
-  console.log(r())
   function n(e) {
     return r()[e-187]
   }
+  console.log(r())
   for (let i in ef) {
     i = Number(i)
     if (typeof ef[i] == "string") {
