@@ -7,20 +7,36 @@ function _r9(text) {
         return a[e -= 187]
     })(e, n)
   }
+  function r() {
+      return (r = function () {
+          return ef
+      })()
+  }(function (e, n) {
+      for (var r = t, a = e();;) try {
+          if (869104 === -parseInt(r(375)) / 1 + -parseInt(r(508)) / 2 * (parseInt(r(709)) / 3) + parseInt(r(568)) / 4 + parseInt(r(187)) / 5 * (parseInt(r(395)) / 6) + parseInt(r(449)) / 7 + -parseInt(r(273)) / 8 * (parseInt(r(586)) / 9) + parseInt(r(291)) / 10 * (parseInt(r(687)) / 11)) break;
+          a.push(a.shift())
+      } catch (e) {
+          a.push(a.shift())
+      }
+  })(r)
+  console.log(r())
+  function n(e) {
+    return r()[e-187]
+  }
   for (let i in ef) {
     i = Number(i)
     if (typeof ef[i] == "string") {
       result = result
-        .replaceAll(`n(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`e(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`t(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`r(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`a(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`o(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`i(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`c(${i+187})`,`"${t(i+187)}"`)
-        .replaceAll(`l(${i+187})`,`"${t(i+187)}"`)
-      console.log(`detected n(${i+187}), replacing with ${t(i+187)}`)
+        .replaceAll(`n(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`e(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`t(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`r(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`a(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`o(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`i(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`c(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`l(${i+187})`,`"${n(i+187)}"`)
+      console.log(`detected n(${i+187}), replacing with ${n(i+187)}`)
     } else {
       console.log(`detected n(${i+187}) but it isn't a string, so it will not be replaced.`)
     }
