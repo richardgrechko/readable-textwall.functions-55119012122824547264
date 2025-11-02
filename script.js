@@ -42,6 +42,7 @@ function _r9(text) {
       console.log(`detected n(${i+187}) but it isn't a string, so it will not be replaced.`)
     }
   }
+  result = result.replaceAll("\\","\\\\")
   return result
 }
 document.getElementById("readable-functions").innerHTML = _r9(`! function (e) {
