@@ -27,9 +27,10 @@ function _r9(text) {
     i = Number(i)
     if (typeof ef[i] == "string") {
       result = result
+        .replaceAll(`t(${i+187})`,`"${n(i+187)}"`)
+        .replaceAll(`b "${n(i+187)}"`,`bt(${i+187})`)
         .replaceAll(`n(${i+187})`,`"${n(i+187)}"`)
         .replaceAll(`e(${i+187})`,`"${n(i+187)}"`)
-        .replaceAll(`t(${i+187})`,`"${n(i+187)}"`)
         .replaceAll(`r(${i+187})`,`"${n(i+187)}"`)
         .replaceAll(`a(${i+187})`,`"${n(i+187)}"`)
         .replaceAll(`o(${i+187})`,`"${n(i+187)}"`)
