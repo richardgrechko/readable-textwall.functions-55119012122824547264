@@ -4,15 +4,15 @@ function _r9(text) {
   for (let i in e) {
     i = Number(i)
     result = result
-      .replaceAll(`n(${i+187})`,e[i])
-      .replaceAll(`e(${i+187})`,e[i])
-      .replaceAll(`t(${i+187})`,e[i])
-      .replaceAll(`r(${i+187})`,e[i])
-      .replaceAll(`a(${i+187})`,e[i])
-      .replaceAll(`o(${i+187})`,e[i])
-      .replaceAll(`i(${i+187})`,e[i])
-      .replaceAll(`c(${i+187})`,e[i])
-      .replaceAll(`l(${i+187})`,e[i])
+      .replaceAll(`n(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`e(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`t(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`r(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`a(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`o(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`i(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`c(${i+187})`,`"${e[i]}"`)
+      .replaceAll(`l(${i+187})`,`"${e[i]}"`)
     console.log(`detected n(${i+187}), replacing with ${e[i]}`)
   }
   return result
