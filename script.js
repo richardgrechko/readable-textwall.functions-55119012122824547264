@@ -44,20 +44,28 @@ function _r9(text) {
   }
   console.log("renaming all functions")
   result = result.replace(/Vn\(([\s\S]*?)\)/g,`writeChar($1)`)
+  .replace(/=([\s]*)Vn/g,`= writeChar`)
   .replace(/Lr\(([\s\S]*?)\)/g,`getPRNG($1)`)
   .replace(/vr\(([\s\S]*?)\)/g,`goTo($1)`)
+  .replace(/=([\s]*)vr/g,`= goTo`)
+  .replace(/Zn\(([\s\S]*?)\)/g,`tp($1)`)
+  .replace(/=([\s]*)vr/g,`= tp`)
   .replace(/Vr\(([\s\S]*?)\)/g,`getFormat($1)`)
   .replace(/Or = function \(([\s\S]*?)\)/g,`function networkBinary($1)`)
   .replace(/Or\(([\s\S]*?)\)/g,`networkBinary($1)`)
+  .replace(/=([\s]*)Or/g,`= networkBinary`)
   .replace(/Tn\(([\s\S]*?)\)/g,`emit($1)`)
   .replace(/ir\(([\s\S]*?)\)/g,`toast($1)`)
+  .replace(/=([\s]*)ir/g,`= toast`)
   .replace(/mr\(([\s\S]*?)\)/g,`changeColors($1)`)
+  .replace(/=([\s]*)mr/g,`= changeColors`)
   .replace(/Rr = function\(([\s\S]*?)\)/g,`function networkText($1)`)
-  .replace(/Rr\(([\s\S]*?)\)/g,`networkText($1)`)
+  .replace(/=([\s]*)Rr/g,`= networkText`)
   .replace(/Rr\(([\s\S]*?)\)/g,`networkText($1)`)
   .replace(/Zr\(([\s\S]*?)\)/g,`listedFormat($1)`)
   .replace(/Vr\(([\s\S]*?)\)/g,`numFormat($1)`)
   .replace(/aib\(([\s\S]*?)\)/g,`sendChat($1)`)
+  .replace(/=([\s]*)aib/g,`= sendChat`)
   return result
 }
 document.getElementById("readable-functions").innerHTML = _r9(`!function (e) {
@@ -3366,7 +3374,7 @@ document.getElementById("readable-functions").innerHTML = _r9(`!function (e) {
                     var url = URL.createObjectURL(blob);
                     var a = document.createElement('a');
                     a.href = url;
-                    a.download = \`tile_$\{e}_$\{t}.png\`;
+                    a.download = \`tile_$\{e\}_$\{t\}.png\`;
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
