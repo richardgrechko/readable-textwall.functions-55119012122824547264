@@ -68,7 +68,7 @@ function _r9(text) {
   .replace(/=([\s]*)aib/g,`= sendChat`)
   return result
 }
-document.getElementById("readable-functions").innerHTML = _r9(`!function (e) {
+document.getElementById("readable-functions").innerText = _r9(`!function (e) {
     function t(e, n) {
         var a = r();
         return (t = function (e, t) {
