@@ -69,8 +69,8 @@ function _r9(text) {
   return result
 }
 function changeNewLines(text) {
-	let regex = /(([\s]*?)[':?][\s\S]*?[\n]*?[\s\S]*?[':?]([\s]*?))+/g
-	let regex2 = /(([\s]*?)[":?][\s\S]*?[\n]*?[\s\S]*?[":?]([\s]*?))+/g
+	let regex = /([':?][\s\S]*?[\n]*?[\s\S]*?[^\\][':?])+/gm
+	let regex2 = /([":?][\s\S]*?[\n]*?[\s\S]*?[^\\][":?])+/gm
 	let result = text
 	let allMatches = [...text.matchAll(regex),...text.matchAll(regex2)]
 	console.log(allMatches)
