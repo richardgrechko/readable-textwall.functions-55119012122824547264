@@ -3386,7 +3386,7 @@ document.getElementById("readable-functions").innerText = _r9(`!function (e) {
                     var url = URL.createObjectURL(blob);
                     var a = document.createElement('a');
                     a.href = url;
-                    a.download = `tile_$\{e\}_$\{t\}.png`;
+                    a.download = \`tile_$\{e\}_$\{t\}.png\`;
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
@@ -3597,7 +3597,7 @@ document.getElementById("readable-functions").innerText = _r9(`!function (e) {
                                         u = void 0,
                                         c = n,
                                         l = 20 * Math[c(437)](i[0] / 20) + "," + 10 * Math.floor(i[1] / 10),
-                                        (u = we[c(520)](l)) && u.protected && 0 == j) || Mt(t.n != "" || !anonIdShow ? t.n : `($\{t.id || 0\})`, y, g, o)
+                                        (u = we[c(520)](l)) && u.protected && 0 == j) || Mt(t.n != "" || !anonIdShow ? t.n : \`($\{t.id || 0\})\`, y, g, o)
                             }
                         }
                     }
@@ -3621,7 +3621,7 @@ document.getElementById("readable-functions").innerText = _r9(`!function (e) {
                     if (E[e(585)] = be,
                         kt(y = Math[e(433)](10 * Ce[e(235)] * v), g = Math[e(433)](20 * Ce[e(201)] * v), r, a),
                         tt[e(567)].checked && (gt(E),
-                            Mt((tt[e(280)][e(427)] || je == "") && anonIdShow ? `($\{window.w.clientId || 0\})` : (tt[e(280)][e(427)] ? "" : je), y, g, o)),
+                            Mt((tt[e(280)][e(427)] || je == "") && anonIdShow ? \`($\{window.w.clientId || 0\})\` : (tt[e(280)][e(427)] ? "" : je), y, g, o)),
                         Je && $e[e(258)] && $e[e(571)]) {
                         E.fillStyle = e(491),
                             y = Math[e(433)](10 * Math[e(678)]($e[e(258)].x, $e.end.x) * v),
