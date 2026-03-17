@@ -68,7 +68,18 @@ function _r9(text) {
   .replace(/=([\s]*)aib/g,`= sendChat`)
   return result
 }
-document.getElementById("readable-functions").innerText = _r9(`!function (e) {
+function changeNewLines(text) {
+	let regex = /[(\'|\")?](([\n]*?)([\s\S]*?)([\n]*?))*?[(\'|\")?]/g
+	let result = text
+	let allMatches = [...text.matchAll(regex)]
+	console.log(allMatches)
+	for (let i in allMatches) {
+		console.log(i,allMatches[i])
+		result = result.replaceAll(allMatches[i][1],allMatches[i][1].replaceAll("\n","\\n"))
+	}
+	return result
+}
+document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!function (e) {
     function t(e, n) {
         var a = r();
         return (t = function (e, t) {
@@ -4510,4 +4521,4 @@ document.getElementById("readable-functions").innerText = _r9(`!function (e) {
             window.w.showToast = ir;
         }(n(677) == typeof browser ? browser = {} : browser)
 }("undefined" == typeof browser ? browser = {} : browser);
-`)
+`))
