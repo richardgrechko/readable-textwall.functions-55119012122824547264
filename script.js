@@ -68,19 +68,7 @@ function _r9(text) {
   .replace(/=([\s]*)aib/g,`= sendChat`)
   return result
 }
-function changeNewLines(text) {
-	let regex = /([':?][\s\S]*?[\n]*?[\s\S]*?[^\\][':?])+/gm
-	let regex2 = /([":?][\s\S]*?[\n]*?[\s\S]*?[^\\][":?])+/gm
-	let result = text
-	let allMatches = [...text.matchAll(regex),...text.matchAll(regex2)]
-	console.log(allMatches)
-	for (let i in allMatches) {
-		console.log(i,allMatches[i])
-		result = result.replaceAll(allMatches[i][0],(allMatches[i][0]??"").replaceAll("\n","\\n"))
-	}
-	return result
-}
-document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!function (e) {
+document.getElementById("readable-functions").innerText = _r9(`!function (e) {
     function t(e, n) {
         var a = r();
         return (t = function (e, t) {
@@ -90,7 +78,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
     }
     var n = t;
     function r() {
-        var e = ["copyico", "cool", "/static/star.svg", "preventDefault", "newpass", "texttheme", "pointerId", "checked", "dec", "size", "now", "themeico", "dblclick", "round", "flex", "readOnly", "removeChild", "floor", "fromCodePoint", "dataset", "offset", "deleteaccount", "showothercurs", "div", "customtheme", "#493AC1", "memberlist", "member", "inputType", "2055914epKCPp", "#7EED56", "px ", "open", "quadraticCurveTo", "appendChild", "Create", "focus", ", monospace", "random", "register", "setItem", "#000000", "paste", "fetchFont", "zoom", "&y=", "includes", "block", "strikethrough", "password", "New passwords do not match.", "opacity", "0,-10", "\p{Extended_Pictographic}", "Unifont", "registerbtn", "hideCursors", "msg", "inputmember", "private", "dark blue", "selectionEnd", "startsWith", "loginbtn", "execCommand", "noui", "10px Special", "pointercancel", "Please type a password.", "/static/fonts/terminus.hex", "disableChat", "rgba(0,120,212,0.5)", "Please type 'confirm' in the text box if you would like to delete your wall.", "pop", "log", "italic bold 10px ", "insertBefore", "href", "true", "toLowerCase", "length", "#6D482F", "accountdeleted", "clientHeight", "font", "col", "change", "none", "7382lhphtT", "refresh", "target", "string", "writeText", "OffscreenCanvas", "touchend", "addmemberbtn", "rgba(221,249,255,0.5)", "#EBEBEB", "binaryType", "translateX(0px)", "get", "/static/lock_open.svg", "cursor", "themetext", "backgroundColor", "textarea", "Firefox", "fillRect", "lastedit", "maxLength", "innerWidth", "walllist", "Username/Password is incorrect.", "newpass2", "loginfail", "#898D90", "clientY", "innerText", "text", "#FFB470", " nearby", "number", "accountsettings", "deleteContentBackward", "connecting2", "left", "codePointAt", "perms", "oldpass", "top", "display", "contains", "Password has been changed.", "You cannot add more than 20 members.", "teal", "substring", "Please type your username.", "transform", "getMonth", "#6A5CFF", "translate", "toString", "/static/moon.svg", "onchange", "shift", ", monospace, Special", "span", "shownametags", "328500xgTFKE", "tpwordgo", "fillText", "end", "highlighted", "clipboardData", "getFloat64", "Invalid code point: ", "chatbox", "disablecolour", "Array.from requires an array-like object - not null or undefined", "pale purple", "password2", "createElement", "Array.from: when provided, the second argument must be a function", "bold", "/static/ping.js", "fillStyle", "18ZbIeJp", "#009EAA", "Inconsolata", "wheel", "padStart", "addmem", "byteOffset", "100%", "selected", "insertLineBreak", "translateX(-105%)", "toUpperCase", "rainbow", "disabled", "setTransform", "pageX", "wrongpass", "submitpasschange", "disableColour", "optionsmenu", "decorations", "bdtiple", "add", "chat to nobody", "closemenu", "keys", "userAgent", "showchat", "dark grey", "src", "fill", "black", "primary", "call", "0.2", "nametaken", "main", "innerHeight", "drawText", "childElementCount", "chngusername", "remove", "getElementById", "light pink", "coords", "Array.prototype.indexOf called on null or undefined", "getContext", "disablebraille", "#B44AC0", "select", "sign", "deletepassword", "placeholder", "delete", "tpcoordgo", "ws://", "Create a new wall", "splice", "set", "spaceMissingCharacters", "yellow", "alert", "arraybuffer", "10px", "copy", "abc", "drawChar", "host", "-20,-10", "chunks", "charCodeAt", "freename", "#9C6926", "alt", "edge", "You have typed in your current username.", "isArray", "type 'confirm' here", "walldisablecolour", "rgba(204,204,204,0.5)", "underline", "option", "split", "#FFD635", "strokeStyle", "buttonlink", "popstate", "removeItem", "test", "Your username is now: ", "classList", "undefined", "min", "pointerup", "login", "maxy", "Terminus", "charMap", "orientationchange", "#811E9F", "onclick", "1024463WHQzZL", "function", "keydown", "dpr", "registerlink", "hidden", "copydecorations", "bold ", "Custom", "admin", "logoutlink", "data", "clientX", "deltaY", "onerror", "tpy", "orange", "txt", "Please type your new password.", "readonly", "msgcontainer", "protect", "3gLFWBy", "noreg", "scale", "scrollHeight", "520rMZDVP", "deletename", "/ws", "tagName", "parse", "submitnamechange", "protected", "sqrt", "Public", "This wall is in read-only mode.", "send", "indexOf", "parseFont", "magenta", "rawy", "/static/sun.svg", "subarray", "wss://", "input", "light teal", "/static/done.svg", "removeAttribute", "colour", "fontSize", "onclose", "clr", ": (", "offsetTop", "info", "addEventListener", "replace", "touches", "children", "unread", "#FFA800", "clear", "smoothcursors", "passchanged", "ctrlKey", "close", "max", "home", "#2450A4", "innerHTML", "green", "keyCode", "reload", "translateX(", "rawx", "imageSmoothingEnabled", "goto", " nearby)", "px Special", "Password is incorrect.", "OPEN", "openmenu", "Connected.", "italic", "/static/fonts/fixed.hex", "prototype", "[object Function]", "   ", "Connection lost.", "pathname", "red", "drawImage", "deletewallconfirm", "createTextNode", "light green", "false", "clientWidth", "start", "show", "light blue", "copycolour", "ceil", "priv", "#94B3FF", "content", "brown", "justifyContent", "loginname", "loggedin", "style", "dcl", "altKey", "3268832GOrAoJ", "substr", "resize", "getElementsByClassName", "pink", "parentNode", "object", "anonymous", "rgba(239, 255, 71, 0.5)", "#222222", "free", "bmp", "italic ", "#6D001A", "Username is invalid.", "shiftKey", "type", "admintable", "140cEWkKM", "img", "submit", "isTrusted", " online", "from", "~main", "maxx", " (disconnected)", "requestAnimationFrame", "username", "chatmsg", "touchstart", "delaccountform", "button", "rgba(34, 34, 34, 0.4)", "\\n\\n\\n\\n\\n\\n\\n\\n\\n", "pushState", "Please type your new password again.", "title", "toasting", "#FF99AA", "invalidTypeReplacement", "tpword", "#FFFFFF", "#51E9F4", "#3690EA", "lastElementChild", "minx", "contextmenu", "insertFromPaste", "monospace", "token", "GET", "pointerdown", "pasteico", "color", "teleport", "height", "abs", "px Courier", "canvas", "customfontsize", "blur", "checkbox", "Please type a username.", "Invalid wall name", "online", "roundRect", "readText", "^[a-zA-Z0-9_-]{1,24}$", "tpx", "unshift", "crosshair", "clipboard", "usermenu", "dark purple", "readyState", "lineTo", "burgundy", "stringify", "theme", "forceSharpPixels", "fromCharCode", "christmas", "value", "blue", "smoothpanning", "pointermove", "defineProperty", "has", "measureText", "disableBraille", "nextSibling", "customfont", "addmembers", "pageY", "colourlist", "textAlign", "parentElement", "dark red", "fontselect", "Please type your password.", "miny", "1339710QIWWjh", "#DE107F", "iPod", "Click here to reconnect.", "http", "https:", "width", "loginpass", "click", "status", "beige", "slice", "connecting1", "setAttribute", "sort", "replaceState", "textwall", "italic 10px ", "chngeusrpass", "chat", "77886fpVOzR", "pow", "history", "push", "exportFont", "Copied link.", "ontouchstart", "getDate", "scrollTop", "enabled", "iPad", "secondary", "lavender", "empty", "moveTo", "beginPath", "apply", " ~ ", "then", "getItem", "deletewall", "/static/copy.svg", "#515252", "rgba(", "#141414"];
+        var e = ["copyico", "cool", "/static/star.svg", "preventDefault", "newpass", "texttheme", "pointerId", "checked", "dec", "size", "now", "themeico", "dblclick", "round", "flex", "readOnly", "removeChild", "floor", "fromCodePoint", "dataset", "offset", "deleteaccount", "showothercurs", "div", "customtheme", "#493AC1", "memberlist", "member", "inputType", "2055914epKCPp", "#7EED56", "px ", "open", "quadraticCurveTo", "appendChild", "Create", "focus", ", monospace", "random", "register", "setItem", "#000000", "paste", "fetchFont", "zoom", "&y=", "includes", "block", "strikethrough", "password", "New passwords do not match.", "opacity", "0,-10", "\\p{Extended_Pictographic}", "Unifont", "registerbtn", "hideCursors", "msg", "inputmember", "private", "dark blue", "selectionEnd", "startsWith", "loginbtn", "execCommand", "noui", "10px Special", "pointercancel", "Please type a password.", "/static/fonts/terminus.hex", "disableChat", "rgba(0,120,212,0.5)", "Please type 'confirm' in the text box if you would like to delete your wall.", "pop", "log", "italic bold 10px ", "insertBefore", "href", "true", "toLowerCase", "length", "#6D482F", "accountdeleted", "clientHeight", "font", "col", "change", "none", "7382lhphtT", "refresh", "target", "string", "writeText", "OffscreenCanvas", "touchend", "addmemberbtn", "rgba(221,249,255,0.5)", "#EBEBEB", "binaryType", "translateX(0px)", "get", "/static/lock_open.svg", "cursor", "themetext", "backgroundColor", "textarea", "Firefox", "fillRect", "lastedit", "maxLength", "innerWidth", "walllist", "Username/Password is incorrect.", "newpass2", "loginfail", "#898D90", "clientY", "innerText", "text", "#FFB470", " nearby", "number", "accountsettings", "deleteContentBackward", "connecting2", "left", "codePointAt", "perms", "oldpass", "top", "display", "contains", "Password has been changed.", "You cannot add more than 20 members.", "teal", "substring", "Please type your username.", "transform", "getMonth", "#6A5CFF", "translate", "toString", "/static/moon.svg", "onchange", "shift", ", monospace, Special", "span", "shownametags", "328500xgTFKE", "tpwordgo", "fillText", "end", "highlighted", "clipboardData", "getFloat64", "Invalid code point: ", "chatbox", "disablecolour", "Array.from requires an array-like object - not null or undefined", "pale purple", "password2", "createElement", "Array.from: when provided, the second argument must be a function", "bold", "/static/ping.js", "fillStyle", "18ZbIeJp", "#009EAA", "Inconsolata", "wheel", "padStart", "addmem", "byteOffset", "100%", "selected", "insertLineBreak", "translateX(-105%)", "toUpperCase", "rainbow", "disabled", "setTransform", "pageX", "wrongpass", "submitpasschange", "disableColour", "optionsmenu", "decorations", "bdtiple", "add", "chat to nobody", "closemenu", "keys", "userAgent", "showchat", "dark grey", "src", "fill", "black", "primary", "call", "0.2", "nametaken", "main", "innerHeight", "drawText", "childElementCount", "chngusername", "remove", "getElementById", "light pink", "coords", "Array.prototype.indexOf called on null or undefined", "getContext", "disablebraille", "#B44AC0", "select", "sign", "deletepassword", "placeholder", "delete", "tpcoordgo", "ws://", "Create a new wall", "splice", "set", "spaceMissingCharacters", "yellow", "alert", "arraybuffer", "10px", "copy", "abc", "drawChar", "host", "-20,-10", "chunks", "charCodeAt", "freename", "#9C6926", "alt", "edge", "You have typed in your current username.", "isArray", "type 'confirm' here", "walldisablecolour", "rgba(204,204,204,0.5)", "underline", "option", "split", "#FFD635", "strokeStyle", "buttonlink", "popstate", "removeItem", "test", "Your username is now: ", "classList", "undefined", "min", "pointerup", "login", "maxy", "Terminus", "charMap", "orientationchange", "#811E9F", "onclick", "1024463WHQzZL", "function", "keydown", "dpr", "registerlink", "hidden", "copydecorations", "bold ", "Custom", "admin", "logoutlink", "data", "clientX", "deltaY", "onerror", "tpy", "orange", "txt", "Please type your new password.", "readonly", "msgcontainer", "protect", "3gLFWBy", "noreg", "scale", "scrollHeight", "520rMZDVP", "deletename", "/ws", "tagName", "parse", "submitnamechange", "protected", "sqrt", "Public", "This wall is in read-only mode.", "send", "indexOf", "parseFont", "magenta", "rawy", "/static/sun.svg", "subarray", "wss://", "input", "light teal", "/static/done.svg", "removeAttribute", "colour", "fontSize", "onclose", "clr", ": (", "offsetTop", "info", "addEventListener", "replace", "touches", "children", "unread", "#FFA800", "clear", "smoothcursors", "passchanged", "ctrlKey", "close", "max", "home", "#2450A4", "innerHTML", "green", "keyCode", "reload", "translateX(", "rawx", "imageSmoothingEnabled", "goto", " nearby)", "px Special", "Password is incorrect.", "OPEN", "openmenu", "Connected.", "italic", "/static/fonts/fixed.hex", "prototype", "[object Function]", "   ", "Connection lost.", "pathname", "red", "drawImage", "deletewallconfirm", "createTextNode", "light green", "false", "clientWidth", "start", "show", "light blue", "copycolour", "ceil", "priv", "#94B3FF", "content", "brown", "justifyContent", "loginname", "loggedin", "style", "dcl", "altKey", "3268832GOrAoJ", "substr", "resize", "getElementsByClassName", "pink", "parentNode", "object", "anonymous", "rgba(239, 255, 71, 0.5)", "#222222", "free", "bmp", "italic ", "#6D001A", "Username is invalid.", "shiftKey", "type", "admintable", "140cEWkKM", "img", "submit", "isTrusted", " online", "from", "~main", "maxx", " (disconnected)", "requestAnimationFrame", "username", "chatmsg", "touchstart", "delaccountform", "button", "rgba(34, 34, 34, 0.4)", "\\n\\n\\n\\n\\n\\n\\n\\n\\n", "pushState", "Please type your new password again.", "title", "toasting", "#FF99AA", "invalidTypeReplacement", "tpword", "#FFFFFF", "#51E9F4", "#3690EA", "lastElementChild", "minx", "contextmenu", "insertFromPaste", "monospace", "token", "GET", "pointerdown", "pasteico", "color", "teleport", "height", "abs", "px Courier", "canvas", "customfontsize", "blur", "checkbox", "Please type a username.", "Invalid wall name", "online", "roundRect", "readText", "^[a-zA-Z0-9_-]{1,24}$", "tpx", "unshift", "crosshair", "clipboard", "usermenu", "dark purple", "readyState", "lineTo", "burgundy", "stringify", "theme", "forceSharpPixels", "fromCharCode", "christmas", "value", "blue", "smoothpanning", "pointermove", "defineProperty", "has", "measureText", "disableBraille", "nextSibling", "customfont", "addmembers", "pageY", "colourlist", "textAlign", "parentElement", "dark red", "fontselect", "Please type your password.", "miny", "1339710QIWWjh", "#DE107F", "iPod", "Click here to reconnect.", "http", "https:", "width", "loginpass", "click", "status", "beige", "slice", "connecting1", "setAttribute", "sort", "replaceState", "textwall", "italic 10px ", "chngeusrpass", "chat", "77886fpVOzR", "pow", "history", "push", "exportFont", "Copied link.", "ontouchstart", "getDate", "scrollTop", "enabled", "iPad", "secondary", "lavender", "empty", "moveTo", "beginPath", "apply", " ~ ", "then", "getItem", "deletewall", "/static/copy.svg", "#515252", "rgba(", "#141414"];
         return (r = function () {
             return e
         }
@@ -136,8 +124,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                 }
                 [n(199)](e) {
                     var t = n
-                        , r = e[t(668)]("
-");
+                        , r = e[t(668)]("\\n");
                     const a = r[t(500)];
                     for (var o = 0; o < a; o++) {
                         var i = r[o];
@@ -160,8 +147,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                             r += ":";
                         for (var a = 0; a < o.length; a++)
                             r += o[a][e(561)](16)[e(590)](2, "0")[e(597)]();
-                        t += r += "
-"
+                        t += r += "\\n"
                     }
                     return t
                 }
@@ -194,9 +180,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                 [n(624)](e, t, r, a) {
                     for (var o = n, i = r, c = a, l = Array[o(296)](e), u = 0; u < l[o(500)]; u++) {
                         var s = l[u];
-                        "
-" != s && ("
-" != s ? r += this.drawChar(s, t, r, a) : (a += 16 * this.scale,
+                        "\r" != s && ("\\n" != s ? r += this.drawChar(s, t, r, a) : (a += 16 * this.scale,
                             r = i))
                     }
                     return {
@@ -646,13 +630,12 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                 Ct = !1
             }
             try {
-                At = RegExp("	", "gm")
+                At = RegExp("\t", "gm")
             } catch (e) {
                 At = !1
             }
             try {
-                Tt = RegExp("
-", "gm")
+                Tt = RegExp("\r", "gm")
             } catch (e) {
                 Tt = !1
             }
@@ -1147,8 +1130,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                                     }
                                     Ce.x = r,
                                         Ce.y++,
-                                        s += "
-",
+                                        s += "\\n",
                                         d += " "
                                 }
                                 s = s[t(386)](0, -1),
@@ -1200,39 +1182,30 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                     }
                 }
                 )),
+                
                 i[n(216)](n(689), (function (e) {
                     var t = n;
                     if (e[t(294)]) {
                         switch (e[t(232)]) {
                             case 38:
-                                Ce.y -= 1,
-                                    nr(),
-                                    ie(!1),
-                                    e[t(423)]();
+                                window.w.moveCursor("up", 1);
+                                e.preventDefault();
                                 break;
                             case 40:
-                                Ce.y += 1,
-                                    nr(),
-                                    ie(!1),
-                                    e[t(423)]();
+                                window.w.moveCursor("down", 1);
+                                e.preventDefault();
                                 break;
                             case 37:
-                                Ce.x -= 1,
-                                    nr(),
-                                    ie(!1),
-                                    e.preventDefault();
+                                window.w.moveCursor("left", 1);
+                                e.preventDefault();
                                 break;
                             case 39:
-                                Ce.x += 1,
-                                    nr(),
-                                    ie(!1),
-                                    e[t(423)]();
+                                window.w.moveCursor("right", 1);
+                                e.preventDefault();
                                 break;
                             case 9:
-                                Ce.x += 3,
-                                    nr(),
-                                    ie(!1),
-                                    e.preventDefault();
+                                window.w.moveCursor("right", 3);
+                                e.preventDefault();
                                 break;
                             case 36:
                                 Ce.x = Ce[t(258)],
@@ -1259,9 +1232,11 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                             , a = ce()
                             , o = Zr(n[3]);
                         pe = o[0],
+                            window.color = pe,
                             le(o[1]),
                             Vn(n[2], 0, !0) || Be.unshift(n),
                             pe = r,
+                            window.color = pe,
                             le(a)
                     }
                 },
@@ -1284,9 +1259,11 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                                             , a = ce()
                                             , o = Zr(t[3]);
                                         pe = o[0],
+                                            window.color = pe,
                                             le(o[1]),
                                             Vn(t[2], 1, !1) || Fe[e(343)](t),
                                             pe = n,
+                                            window.color = pe,
                                             le(a)
                                     }
                                 }(),
@@ -2019,7 +1996,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
 
             let hue = 0;
             window.w = {};
-
+            window.position = qe;
             window.elem = tt;
             window.w.events = {};
             window.w.on = function (e, t) {
@@ -2063,10 +2040,42 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                     try {
                         callback(...args);
                     } catch (err) {
-                        throw err
+                        console.error("Error in event callback for event " + e, err);
                     }
                 }
             }
+            window.w.moveCursor = function (direction, amount, doNotAutoPan) {
+                switch (direction) {
+                    case "up":
+                        Ce.y -= amount;
+                        break;
+                    case "down":
+                        Ce.y += amount;
+                        break;
+                    case "left":
+                        Ce.x -= amount;
+                        break;
+                    case "right":
+                        Ce.x += amount;
+                        break;
+                    default:
+                        throw "Invalid direction";
+                        break;
+                }
+                nr();
+                ie(false);
+                window.w.emit("cursormove", [Ce.x, Ce.y]);
+                if (!doNotAutoPan) Hn();
+            };
+            window.w.moveCursorTo = function(x, y, doNotAutoPan) {
+                Ce.x = x;
+                Ce.y = y;
+                Ce.start = x;
+                nr();
+                ie(false);
+                window.w.emit("cursormove", [Ce.x, Ce.y]);
+                if (!doNotAutoPan) Hn();
+            };
             function parseColoredMessage(msg) {
                 const regex = /<start\s+(#[0-9a-fA-F]{3,6})>([\s\S]*?)<end>/g;
                 const container = document.createElement("span");
@@ -2996,8 +3005,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                                         er = !1,
                                         mr(c),
                                         void le(l);
-                                if ("
-" == r[n])
+                                if ("\\n" == r[n])
                                     return cr(),
                                         setTimeout(e, 20, n + 1, o);
                                 var s, d, f = r[n];
@@ -3145,6 +3153,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                 var r = document.getElementById(pe);
                 r[t(676)][t(627)](t(594)),
                     pe = e,
+                    window.color = pe,
                     be = xe && 0 == pe ? "rgba(255, 255, 255, 0.6)" : Yr(se[pe], .6),
                     (r = document[t(628)](pe))[t(676)][t(608)](t(594)),
                     r[t(214)] < w[t(403)] + 36 && (w[t(403)] = r[t(214)] - 36),
@@ -3377,7 +3386,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                     var url = URL.createObjectURL(blob);
                     var a = document.createElement('a');
                     a.href = url;
-                    a.download = \`tile_$\{e\}_$\{t\}.png\`;
+                    a.download = `tile_$\{e\}_$\{t\}.png`;
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
@@ -3588,7 +3597,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                                         u = void 0,
                                         c = n,
                                         l = 20 * Math[c(437)](i[0] / 20) + "," + 10 * Math.floor(i[1] / 10),
-                                        (u = we[c(520)](l)) && u.protected && 0 == j) || Mt(t.n != "" || !anonIdShow ? t.n : \`($\{t.id || 0})\`, y, g, o)
+                                        (u = we[c(520)](l)) && u.protected && 0 == j) || Mt(t.n != "" || !anonIdShow ? t.n : `($\{t.id || 0\})`, y, g, o)
                             }
                         }
                     }
@@ -3612,7 +3621,7 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
                     if (E[e(585)] = be,
                         kt(y = Math[e(433)](10 * Ce[e(235)] * v), g = Math[e(433)](20 * Ce[e(201)] * v), r, a),
                         tt[e(567)].checked && (gt(E),
-                            Mt((tt[e(280)][e(427)] || je == "") && anonIdShow ? \`($\{window.w.clientId || 0})\` : (tt[e(280)][e(427)] ? "" : je), y, g, o)),
+                            Mt((tt[e(280)][e(427)] || je == "") && anonIdShow ? `($\{window.w.clientId || 0\})` : (tt[e(280)][e(427)] ? "" : je), y, g, o)),
                         Je && $e[e(258)] && $e[e(571)]) {
                         E.fillStyle = e(491),
                             y = Math[e(433)](10 * Math[e(678)]($e[e(258)].x, $e.end.x) * v),
@@ -4522,4 +4531,4 @@ document.getElementById("readable-functions").innerText = changeNewLines(_r9(`!f
             window.w.showToast = ir;
         }(n(677) == typeof browser ? browser = {} : browser)
 }("undefined" == typeof browser ? browser = {} : browser);
-`))
+`)
